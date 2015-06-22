@@ -14,9 +14,10 @@ to handle the following resources:
 * Contacts
 * Addresses nested within contacts
 
-RSpec test cases exist that will guide you through writing the
-controllers. Views are *mostly* provided with one key piece you
-need to add. You'll need to create two files in app/controllers
+This challenge has both RSpec controller and integration test cases that will guide you through writing the
+controllers. Please **DO NOT** edit the tests at all.  Views are provided for you, but a few of them have one key piece missing. You shouldn't need them too much as this is about controller testing and RESTful CRUD.
+
+You'll need to create two files in app/controllers:
 
 * `contacts.rb`
 * `addresses.rb`
@@ -28,6 +29,6 @@ do to get the RSpec tests passing.
 ### Quickstart
 
 1.  `bundle install`
-2.  `rake db:reset`
-3.  `rake db:test:prepare`
-4.  `rspec`
+2.  `bundle exec rake db:reset`
+3.  `bundle exec rake db:test:prepare`
+4.  `bundle exec rspec`
