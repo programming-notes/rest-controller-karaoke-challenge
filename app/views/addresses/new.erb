@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>New contact</h1>
+  <h1>New address</h1>
   <form action="/contacts/<%= @contact.id %>/addresses" method="POST">
     <%= erb :"addresses/_form", locals: { contact: @contact, address: @address } %>
   </form>
