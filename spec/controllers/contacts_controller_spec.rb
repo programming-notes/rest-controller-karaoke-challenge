@@ -48,7 +48,7 @@ describe "Contact Controller" do
   describe "Creating a Contact" do
 
     context "with valid input" do
-      it "creates a new address" do
+      it "creates a new contact" do
         expect{ post "/contacts",
           { contact: {name: "Casey Cumbow", email: "casey@devbootcamp.com"} }
         }.to change{ Contact.count }.by(1)
@@ -84,7 +84,7 @@ describe "Contact Controller" do
     end
   end
 
-  describe "Getting the Edit Address Form" do
+  describe "Getting the Edit Contact Form" do
     it "displays the edit form with prefilled info" do
       get "/contacts/#{@joe.id}/edit"
       expect(last_response.status).to eq(200)
@@ -98,7 +98,7 @@ describe "Contact Controller" do
 
   describe "Updating Contacts" do
     context "with valid input" do
-      it "updates an address" do
+      it "updates a contact" do
         put "/contacts/#{@joe.id}",
           { contact: {name: "Casey Cumbow", email: "casey@devbootcamp.com"} }
         @joe.reload
@@ -138,7 +138,7 @@ describe "Contact Controller" do
     end
   end
 
-  describe "Deleting an contact" do
+  describe "Deleting a contact" do
 
     it "removes the contact" do
       expect { delete "/contacts/#{@joe.id}" }.to change{ Contact.count }.by(-1)
