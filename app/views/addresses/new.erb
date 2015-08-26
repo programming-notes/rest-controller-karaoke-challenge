@@ -1,6 +1,0 @@
-<div class="container">
-  <h1>New address</h1>
-  <form action="/contacts/<%= @contact.id %>/addresses" method="POST">
-    <%= erb :"addresses/_form", locals: { contact: @contact, address: @address } %>
-  </form>
-</div>

@@ -108,6 +108,13 @@ namespace :db do
     end
   end
 
+  desc "rollback your migration--use STEP=number to step back multiple times"
+  task :rollback do
+    step = (ENV['STEP'] || 1).to_i
+    ActiveRecord::Migrator.rollback('db/migrate', step)
+    Rake::Task['db:version'].invoke if Rake::Task['db:version']
+  end
+
   desc "Populate the database with dummy data by running db/seeds.rb"
   task :seed do
     require APP_ROOT.join('db', 'seeds.rb')
@@ -129,6 +136,16 @@ end
 desc 'Start IRB with application environment loaded'
 task "console" do
   exec "irb -r./config/environment"
+end
+
+
+# In a production environment like Heroku, RSpec might not
+# be available.  To handle this, rescue the LoadError.
+# https://devcenter.heroku.com/articles/getting-started-with-ruby-o#runtime-dependencies-on-development-test-gems
+begin
+  require 'rspec/core/rake_task'
+  RSpec::Core::RakeTask.new(:spec)
+rescue LoadError
 end
 
 task :default  => :spec
