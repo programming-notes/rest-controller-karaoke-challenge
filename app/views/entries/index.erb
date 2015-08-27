@@ -6,14 +6,13 @@
       <li class="entry">
         <span class="singer"><%= entry.singer %></span>
         <span class="song-title"><%= entry.song_title %></span>
-        <span><a href="<%= "show-one-entry/#{entry.id}" %>">details</a></span>
-        <span><a href="<%= "edit-one-entry-form/#{entry.id}" %>">edit</a></span>
-        <span><a href="<%= "delete-entry/#{entry.id}" %>">delete</a></span>
+
+        <ul class="entry-links">
+          <li class="entry-link"><a href="<%= "show-one-entry/#{entry.id}" %>">details</a></li>
+          <li class="entry-link"><a href="<%= "edit-one-entry-form/#{entry.id}" %>">edit</a></li>
+          <li class="entry-link"><a href="<%= "delete-entry/#{entry.id}" %>">delete</a></li>
+        </ul>
       </li>
     <% end %>
   </ul>
 </main>
-
-<section>
-  <a href="/new-entry-form">Sign up to Karaoke</a>
-</section>

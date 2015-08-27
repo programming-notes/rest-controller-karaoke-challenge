@@ -6,14 +6,21 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
-  <title>DBC Karaoke</title>
+  <title>Karaoke</title>
 </head>
 
 <body>
-  <header>DBC Karaoke</header>
+  <div class="container">
+    <header>
+    <span class="title"><a href="/">Karaoke</a></span>
+      <span><a href="/new-entry-form" class="signup button">Sign up to Karaoke</a></span>
+    </header>
 
-  <%= yield %>
+      <%= yield %>
 
-  <footer>Important Legal Information</footer>
+    <footer>
+      <span class="legal">Important Legal Information</span>
+    </footer>
+  </div>
 </body>
 </html>
