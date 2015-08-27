@@ -9,7 +9,7 @@ end
 
 post '/create-new-post' do
   entry = Entry.new(params[:entry])
-  redirect entry.save ? '/all-the-entries' : '/create-new-post'
+  redirect entry.save ? '/all-the-entries' : '/new-entry-form'
 end
 
 get '/show-one-entry/:id' do
