@@ -6,6 +6,7 @@
       <li class="entry">
         <span class="singer"><%= entry.singer %></span>
         <span class="song-title"><%= entry.song_title %></span>
+        <span><a href="<%= "show-one-entry/#{entry.id}" %>">details</a></span>
       </li>
     <% end %>
   </ul>
