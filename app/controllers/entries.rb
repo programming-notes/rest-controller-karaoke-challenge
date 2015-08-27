@@ -8,8 +8,13 @@ get '/new-entry-form' do
 end
 
 post '/create-new-post' do
-  entry = Entry.new(params[:entry])
-  redirect entry.save ? '/all-the-entries' : '/new-entry-form'
+  @entry = Entry.new(params[:entry])
+  if @entry.save
+    redirect "/show-one-entry/#{@entry.id}"
+  else
+    @errors = @entry.errors.full_messages
+    erb :'entries/new'
+  end
 end
 
 get '/show-one-entry/:id' do
