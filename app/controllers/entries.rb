@@ -27,3 +27,9 @@ post '/edit-one-entry-form/update-entry/:id' do
   entry.update_attributes(params[:entry])
   redirect "/show-one-entry/#{entry.id}"
 end
+
+get '/delete-entry/:id' do
+  entry = Entry.find(params[:id])
+  entry.destroy
+  redirect '/all-the-entries'
+end
