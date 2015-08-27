@@ -1,5 +1,6 @@
-Entry.create [{ :singer => 'Elmo Tate',      :song_title => 'I Love Rock & Roll'},
-              { :singer => 'Chase Lee',      :song_title => 'Say It Ain\'t So'},
-              { :singer => 'Ileen Eliott',   :song_title => 'Poison'},
-              { :singer => 'Rasim Fournier', :song_title => 'Hold On'},
-              { :singer => 'Ella Weaver',    :song_title => 'One Way or Another'}]
+Entry.create [{ :singer => 'Allen Dayag', :song_title => 'Pony'},
+              { :singer => 'Alyssa Diaz', :song_title => 'Santeria'},
+              { :singer => 'Jerry Van Strydonck and Mark Ducommun', :song_title => 'Stan'},
+              { :singer => 'Torey Hickman', :song_title => '99 Luftballons'},
+              { :singer => 'Jill Felska and Keith Mazanec', :song_title => 'Jackson'},
+              { :singer => 'Nighthawks 2014', :song_title => 'Say It Ain\'t So'}]
