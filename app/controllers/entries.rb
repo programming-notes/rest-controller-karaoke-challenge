@@ -1,5 +1,5 @@
 get '/all-the-entries' do
-  @entries = Entry.all
+  @entries = Entry.order(:created_at)
   erb :'entries/index'
 end
 
@@ -15,4 +15,15 @@ end
 get '/show-one-entry/:id' do
   @entry = Entry.find(params[:id])
   erb :'entries/show'
+end
+
+get '/edit-one-entry-form/:id' do
+  @entry = Entry.find(params[:id])
+  erb :'entries/edit'
+end
+
+post '/edit-one-entry-form/update-entry/:id' do
+  entry = Entry.find(params[:id])
+  entry.update_attributes(params[:entry])
+  redirect "/show-one-entry/#{entry.id}"
 end
