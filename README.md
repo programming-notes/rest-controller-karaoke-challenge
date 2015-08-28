@@ -1,30 +1,34 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+# REST Controller Challenge
 
-### Purpose
-The Sinatra Skeleton:
+### Learning Competencies
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+* Learn the REST convention by implementing controller methods for 2 resources
+* Understand how HTTP verbs map to CRUD actions
+* Get familiar with RSpec testing of a sinatra app
+
+### Summary
+
+This challenge will involve implementing sinatra controller actions
+to handle the following resources:
+
+* Contacts
+* Addresses nested within contacts
+
+This challenge has both RSpec controller and integration test cases that will guide you through writing the
+controllers. Please **DO NOT** edit the tests at all.  Views are provided for you, but a few of them have one key piece missing. You shouldn't need them too much as this is about controller testing and RESTful CRUD.
+
+You'll need to create two files in app/controllers:
+
+* `contacts.rb`
+* `addresses.rb`
+
+You'll also need to make sure that your views know how to 'fake'
+the appropriate HTTP request method. This should be all you need to
+do to get the RSpec tests passing.
 
 ### Quickstart
 
 1.  `bundle install`
-2.  `shotgun config.ru`
-
-As needed, create models & migrations with the `rake` tasks:
-
-```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
-
-### Contributing
-
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
-
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
-
-Be prepared to give and receive specific, actionable, and kind feedback!
+2.  `bundle exec rake db:reset`
+3.  `bundle exec rake db:test:prepare`
+4.  `bundle exec rspec`
