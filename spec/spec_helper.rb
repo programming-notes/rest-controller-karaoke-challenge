@@ -17,6 +17,8 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
 end
 
+I18n.enforce_available_locales = false
+
 def app
   Sinatra::Application
 end
