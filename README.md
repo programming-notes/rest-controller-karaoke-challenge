@@ -9,11 +9,11 @@ In this challenge we'll learn the conventions around request types (e.g., GET an
 |------------------------------------|----------|--------------|------------------|
 | Insert a dog record                | Create   | POST         | `/dogs`          |
 | Select all dogs records            | Read     | GET          | `/dogs`          |
-| Select one dog record              | Read     | GET          | `/dogs/:id`      | 
+| Select one dog record              | Read     | GET          | `/dogs/:id`      |
 | Form for creating a new dog record | Read     | GET          | `/dogs/new`      |
 | Form for editing a dog record      | Read     | GET          | `/dogs/:id/edit` |
 | Update a dog record                | Update   | PUT          | `/dogs/:id`      |
-| Delete a dog record                | Delete   | DELETE       | `/dogs/:id`      | 
+| Delete a dog record                | Delete   | DELETE       | `/dogs/:id`      |
 *Table 1*.  Conventional request types and paths for CRUD behaviors (based on [table][railsguides routes table] in RailsGuides).
 
 Imagine a dog adoption application with a `Dog` model. If a user wants to list a new dog for adoption, the user needs to navigate to the page with the form for providing information about the dog. Let's say that to get to the page with the form, the user clicks a "List Dog" link. Following convention, clicking that link should trigger a GET request to the path `/dogs/new`.  The response to that request would return the page with the form.  When the user completes the form and clicks the submit button, this should conventionally trigger a POST request to the path `/dogs`.  And there are conventions for the other behaviors as well (see Table 1).
@@ -24,7 +24,7 @@ These conventions are part of an approach to structuring an application known as
 ### Defining Route Handlers
 ```ruby
 get '/dogs/:id' do
-  # Implment route handler
+  # Implement route handler
 end
 
 put '/dogs/:id' do
@@ -46,7 +46,7 @@ There is a browser limitation that we need to work around.  Browsers make GET an
 ```HTML
 <form method="post" action="dogs/<%= @dog.id %>">
   <input type="hidden" name="_method" value="put">
-  
+
   <!-- continue form ... -->
 </form>
 ```
