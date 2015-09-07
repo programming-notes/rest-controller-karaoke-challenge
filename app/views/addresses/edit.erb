@@ -1,9 +1,0 @@
-<div class="container">
-  <h1>Edit address</h1>
-  <form action="/contacts/<%= @contact.id %>/addresses/<%= @address.id %>" method="POST">
-    <input type="submit" value="DELETE" />
-  </form>
-  <form action="/contacts/<%= @contact.id %>/addresses/<%= @address.id %>" method="POST">
-    <%= erb :"addresses/_form", locals: { contact: @contact, address: @address } %>
-  </form>
-</div>

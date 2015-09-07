@@ -12,16 +12,13 @@ require 'shoulda-matchers'
 require 'rack/test'
 require 'capybara'
 require 'capybara/rspec'
-require 'capybara'
-require 'capybara/dsl'
-
-Capybara.app = Sinatra::Application
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
-  config.include Capybara::DSL
 end
 
 def app
   Sinatra::Application
 end
+
+Capybara.app = app.new
