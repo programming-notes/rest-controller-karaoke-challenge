@@ -1,7 +1,7 @@
 <h1>Edit the Entry</h1>
 
 <main class="form-wrapper">
-  <form method="post" action="../update-entry/<%= @entry.id %>">
+  <form method="post" action="/update-entry/<%= @entry.id %>">
     <label for="entry[singer]">Singer name:</label>
     <input name="entry[singer]" type="text" value="<%= @entry.try(:singer) %>">
 
