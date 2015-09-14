@@ -4,7 +4,7 @@
 
   <% if @errors %>
     <div class="errors-wrapper">
-      <p>Your entry could not be saved:</p>
+      <span>Your entry could not be saved:</span>
       <ul class="errors">
         <% @errors.each do |error| %>
           <li class="error"><%= error %></li>
