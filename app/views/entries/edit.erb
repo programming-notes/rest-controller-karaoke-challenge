@@ -2,11 +2,11 @@
 
 <main class="form-wrapper" role="main">
   <form method="post" action="/update-entry/<%= @entry.id %>">
-    <label for="entry[singer]">Singer name:</label>
-    <input name="entry[singer]" type="text" value="<%= @entry.try(:singer) %>">
+    <label for="singer_name_input">Singer name:</label>
+    <input id="singer_name_input" name="entry[singer]" type="text" value="<%= @entry.try(:singer) %>">
 
-    <label for="entry[song_title]">Song title:</label>
-    <input name="entry[song_title]" type="text" value="<%= @entry.try(:song_title) %>">
+    <label for="song_title_input">Song title:</label>
+    <input id="song_title_input"  name="entry[song_title]" type="text" value="<%= @entry.try(:song_title) %>">
 
     <input type="submit" value="Update Entry" class="button">
   </form>
