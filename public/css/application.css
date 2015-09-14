@@ -65,7 +65,7 @@ a, a:visited {
   line-height: 1.75em
 }
 
-  .title a {
+  a.title {
     color: white;
     text-decoration: none;
   }
