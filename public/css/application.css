@@ -1,3 +1,6 @@
+/* *       - https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors
+/* :after  - https://developer.mozilla.org/en-US/docs/Web/CSS/%3A%3Aafter*/
+/* :before - https://developer.mozilla.org/en-US/docs/Web/CSS/%3A%3Abefore */
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -65,7 +68,7 @@ a, a:visited {
   line-height: 1.75em
 }
 
-  .title a {
+  a.title {
     color: white;
     text-decoration: none;
   }

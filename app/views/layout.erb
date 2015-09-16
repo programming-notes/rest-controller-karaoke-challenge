@@ -11,14 +11,14 @@
 
 <body>
   <div class="container">
-    <header>
-      <span class="title"><a href="/">Karaoke</a></span>
-      <span><a href="/new-entry-form" class="signup button">Sign up to Karaoke</a></span>
+    <header role="banner">
+      <a class="title" href="/">Karaoke</a>
+      <a href="/new-entry-form" class="signup button">Sign up to Karaoke</a>
     </header>
 
     <%= yield %>
 
-    <footer>
+    <footer role="siteinfo">
       <span class="legal">Important Legal Information</span>
     </footer>
   </div>
